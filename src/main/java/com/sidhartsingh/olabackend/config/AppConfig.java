@@ -24,7 +24,7 @@ public class AppConfig {
                 .csrf(csrf->csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(new JwtTokenValidationFilter(), BasicAuthenticationFilter.class)
-                .formLogin(Customizer.withDefaults())
+                .formLogin(form -> form.disable())
                 .build();
     }
 

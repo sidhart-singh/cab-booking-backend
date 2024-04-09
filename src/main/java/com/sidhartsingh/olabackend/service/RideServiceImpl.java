@@ -9,6 +9,7 @@ import com.sidhartsingh.olabackend.modal.User;
 import com.sidhartsingh.olabackend.repository.DriverRepository;
 import com.sidhartsingh.olabackend.repository.RideRepository;
 import com.sidhartsingh.olabackend.request.RideRequest;
+import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
+@Service
 public class RideServiceImpl implements RideService{
     private final DriverService driverService;
     private final RideRepository rideRepository;
