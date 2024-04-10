@@ -9,10 +9,10 @@ import java.time.LocalDateTime;
 public class Calculator {
     private static final int EARTH_RADIUS = 6371;
     public double calculateDistance(double sourceLatitude, double sourceLongitude, double destinationLatitude, double destinationLongitude){
-        double distanceLatitutde = Math.toRadians(destinationLatitude - sourceLatitude);
+        double distanceLatitude = Math.toRadians(destinationLatitude - sourceLatitude);
         double distanceLongitude = Math.toRadians(destinationLongitude - sourceLongitude);
 
-        double a = Math.sin(distanceLatitutde / 2) * Math.sin(distanceLatitutde / 2)
+        double a = Math.sin(distanceLatitude / 2) * Math.sin(distanceLatitude / 2)
                 + Math.cos(Math.toRadians(sourceLatitude)) * Math.cos(Math.toRadians(destinationLatitude))
                 + Math.sin(distanceLongitude / 2) * Math.sin(distanceLongitude / 2);
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
