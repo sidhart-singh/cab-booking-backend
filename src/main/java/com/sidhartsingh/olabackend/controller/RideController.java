@@ -67,6 +67,15 @@ public class RideController {
         return new ResponseEntity<>(response, HttpStatus.ACCEPTED);
     }
 
+    @PutMapping("/{rideId}/complete")
+    public ResponseEntity<MessageResponse> rideCompleteHandler(@PathVariable Integer rideId) throws RideException {
+        rideService.completeRide(rideId);
+
+        MessageResponse response = new MessageResponse("Ride is completed. Thank you for riding with OLA.");
+
+        return new ResponseEntity<>(response,  HttpStatus.ACCEPTED);
+    }
+
     @GetMapping("/{rideId}")
     public ResponseEntity<RideDTO> findRideByIdHandler(@PathVariable Integer rideId, @RequestHeader("Authorization") String jwt) throws UserException, RideException {
         User user = userService.getReqUserProfile(jwt);
