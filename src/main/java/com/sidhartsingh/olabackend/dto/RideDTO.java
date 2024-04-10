@@ -6,6 +6,7 @@ import com.sidhartsingh.olabackend.modal.RideStatus;
 import java.time.LocalDateTime;
 
 public class RideDTO {
+    private Integer id;
     private UserDTO user;
     private DriverDTO driver;
     private double pickupLatitude;
@@ -24,6 +25,14 @@ public class RideDTO {
     private int OTP;
 
     public RideDTO() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public UserDTO getUser() {

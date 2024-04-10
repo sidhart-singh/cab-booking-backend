@@ -24,15 +24,15 @@ public class Ride {
     private Double destinationLongitude;
     private String pickupArea;
     private String destinationArea;
-    private Double distance;
-    private Long duration;
+    private double distance;
+    private long duration;
     private RideStatus status;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
-    private Double fare;
-    private Integer OTP;
-    @Embedded
-    private PaymentDetails paymentDetails = new PaymentDetails();
+    private double fare;
+    private int OTP;
+//    @Embedded
+//    private PaymentDetails paymentDetails = new PaymentDetails();
 
     public Ride() {
     }
@@ -173,11 +173,11 @@ public class Ride {
         this.OTP = OTP;
     }
 
-    public PaymentDetails getPaymentDetails() {
-        return paymentDetails;
-    }
+//    public PaymentDetails getPaymentDetails() {
+//        return paymentDetails;
+//    }
 
-    public void setPaymentDetails(PaymentDetails paymentDetails) {
-        this.paymentDetails = paymentDetails;
-    }
+//    public void setPaymentDetails(PaymentDetails paymentDetails) {
+//        this.paymentDetails = paymentDetails;
+//    }
 }

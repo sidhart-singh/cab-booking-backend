@@ -34,10 +34,11 @@ public class DtoMapper {
     }
 
     public static RideDTO toRideDTO(Ride ride){
-        DriverDTO driverDTO = new DriverDTO();
-        UserDTO userDTO = new UserDTO();
+        DriverDTO driverDTO = toDriverDTO(ride.getDriver());
+        UserDTO userDTO = toUserDTO(ride.getUser());
         RideDTO rideDTO = new RideDTO();
 
+        rideDTO.setId(ride.getId());
         rideDTO.setDestinationLatitude(ride.getDestinationLatitude());
         rideDTO.setDestinationLongitude(ride.getDestinationLongitude());
         rideDTO.setDistance(ride.getDistance());
@@ -51,7 +52,7 @@ public class DtoMapper {
         rideDTO.setUser(userDTO);
         rideDTO.setPickupArea(ride.getPickupArea());
         rideDTO.setDestinationArea(ride.getDestinationArea());
-        rideDTO.setPaymentDetails(ride.getPaymentDetails());
+//        rideDTO.setPaymentDetails(ride.getPaymentDetails());
         rideDTO.setOTP(ride.getOTP());
 
         return rideDTO;

@@ -17,10 +17,10 @@ public class Driver {
     private String email;
     @Column(unique = true)
     private String mobile;
-    private Double rating;
+    private double rating;
     private String password;
-    private Double latitude;
-    private Double longitude;
+    private double latitude;
+    private double longitude;
     private String profilePicture;
     private UserRole role;
     @OneToOne(mappedBy = "driver", cascade = CascadeType.ALL)
@@ -33,7 +33,7 @@ public class Driver {
     @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
     private Ride currentRide;
-    private Integer totalRevenue = 0;
+    private int totalRevenue = 0;
 
     public Driver() {
     }
